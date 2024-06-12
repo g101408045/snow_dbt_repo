@@ -1,0 +1,6 @@
+seeds:
+  - name: "country_zipcode1"
+    config:
+      full_refresh: true
+      column_types:
+        zipcode: string

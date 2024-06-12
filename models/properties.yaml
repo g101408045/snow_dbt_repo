@@ -1,0 +1,27 @@
+sources:
+  - name: "source_is_snowflake"
+    database: SNOW_FIRST_DATABASE
+    schema: SNOW_FIRST_SCHEMA
+    tables:
+      - name: snow_first_table
+      - name: payments
+      - name: dim_sales
+      - name: scd_table
+      - name: currency_sales
+      - name: currency_value
+      - name: hotel_for_incremental
+      - name: pii_raw
+
+models:
+  - name: "union_file"
+    config:
+      materialized: 'table'
+  - name: "dbt_second"
+    config:
+      materialized: 'view'
+  - name: "pii"
+    columns:
+      - name: "ID"
+        tests:
+        - unique
+    

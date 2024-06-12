@@ -1,2 +1,6 @@
 name: "first_project"
 model-paths: ["models"]
+seed-paths: ['seeds']
+analysis-paths: ['analysis']
+macro-paths: ['macros']
+snapshot-paths: ['snapshot_scd']
